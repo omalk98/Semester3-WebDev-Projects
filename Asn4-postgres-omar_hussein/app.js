@@ -15,11 +15,11 @@ const {Client} = require('pg')
 
 //Create a CLIENT object to connect ot PostgreSQL DB in Heroku
 const connection = new Client({
-  host:'ec2-35-169-204-98.compute-1.amazonaws.com',
-  user:'oemwllezldfnoq',
-  port:'5432',
-  password:'9b7f2fdf5b80ea16217d16574147d44d7742fef6efa6c8067b5ed885ade8af36',
-  database:'d477m4q1p2hjl7',
+  host:'',
+  user:'',
+  port:'',
+  password:'',
+  database:'',
   ssl:{rejectUnauthorized:false}
 })
  

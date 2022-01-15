@@ -5,4 +5,11 @@ week*
 **/public/images/**
 !**/public/images/missing_files.txt
 **/.data/**
+!**/.data/user_count.json
 !**/.data/missing_files.txt
+**/config/**
+**/database/config/**
+**/js/database/config/**
+!**/config/missing_files.txt
+!**/database/config/missing_files.txt
+!**/js/database/config/missing_files.txt
