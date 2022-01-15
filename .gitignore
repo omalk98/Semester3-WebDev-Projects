@@ -4,3 +4,5 @@ week*
 **/*.mp4
 **/public/images/**
 !**/public/images/missing_files.txt
+**/.data/**
+!**/.data/missing_files.txt
