@@ -1,0 +1,38 @@
+#header {
+    text-align: center;
+    background-image: url(https://wallpapercave.com/wp/uDeSAl4.jpg);
+    height: 12vh;
+    font-size: 15pt;
+    box-shadow: 0 3px 15px;
+    margin-bottom: 2em;
+
+}
+.hf span {
+    text-decoration: overline underline;
+    font-size: 25pt;
+}
+.hf span h1 {
+    display: inline;
+}
+.hf {
+    padding-top: 1em;
+    border: solid 2px black;
+    text-shadow: white 0 0 6px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#footer {
+    position: relative;
+    margin-top: -5vh;
+    height: 5vh;
+    font-size: 15pt;
+    box-shadow: 0 -3px 15px;
+    clear: both;
+}
+#name {
+    float: left;
+    padding-left: 100px;
+}
+#std_id {
+    float: right;
+    padding-right: 100px;
+}

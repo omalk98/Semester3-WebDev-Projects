@@ -1,0 +1,147 @@
+<script>
+    $(document).ready(function () {
+        let check_pass = false, check_fill = false;
+        $('#re_password').change(function () {
+            if ($(this).val() === $('#s_password').val() || $(this).val != '') {
+                $('#pass_check_rpw').html('Match.');
+                check_pass = true;
+            }
+            else {
+                $('#pass_check_rpw').html('Passwords Must Match!');
+                check_pass = false;
+            }
+        });
+
+        gen_err = (err_loc) => { $(err_loc).html('Must be Filled.') };
+
+        $('#signup_btn').on('click', function (e) {
+            if (check_pass) {
+                check_fill = true;
+                if ($('#f_name').val() == '') {
+                    check_fill = false;
+                    gen_err('#check_fn');
+                }
+                else gen_err('');
+                if ($('#l_name').val() == '') {
+                    check_fill = false;
+                    gen_err('#check_ln');
+                }
+                else gen_err('');
+                if ($('#email').val() == '') {
+                    check_fill = false;
+                    gen_err('#check_em');
+                }
+                else gen_err('');
+                if ($('#dob').val() == '') {
+                    check_fill = false;
+                    gen_err('#check_dob');
+                }
+                else gen_err('');
+                if ($('#s_username').val() == '') {
+                    check_fill = false;
+                    $('#check_un').html('Must be Filled.');
+                }
+                else gen_err('');
+                if ($('#s_password').val() == '') {
+                    check_fill = false;
+                    $('#check_pw').html('Must be Filled.');
+                }
+                else gen_err('');
+                if ($('#re_password').val() == '') {
+                    check_fill = false;
+                    $('#pass_check_rpw').html('Must be Filled.');
+                }
+                else gen_err('');
+            }
+
+            if (check_pass && check_fill)
+                $(this).submit();
+            else
+                e.preventDefault();
+        });
+    });
+</script>
+
+<div class="container">
+    <br><br>
+    <h1><u>Signup Now</u></h1>
+    <br>
+    <form method='POST' action='/signup' enctype='multipart/form-data'>
+        <div class="row mb-3">
+            <label for="f_name" class="col-sm-2 col-form-label">First Name :</label>
+            <div class="col-sm-10">
+                <input name="firstName" type="text" class="form-control" id="f_name" placeholder="First Name"
+                    required>
+            </div>
+        <span id="check_fn" style="color:red;"></span>
+        </div>
+        <div class="row mb-3">
+            <label for="l_name" class="col-sm-2 col-form-label">Last Name :</label>
+            <div class="col-sm-10">
+                <input name="lastName" type="text" class="form-control" id="l_name" placeholder="Last Name"
+                    required>
+            </div>
+        <span id="check_ln" style="color:red;"></span>
+        </div>
+        <div class="row mb-3">
+            <label for="email" class="col-sm-2 col-form-label">Email :</label>
+            <div class="col-sm-10">
+                <input name="email" type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+        </div>
+        <span id="check_em" style="color:red;"></span>
+        <div class="row mb-3">
+            <label for="dob" class="col-sm-2 col-form-label">Date of Birth :</label>
+            <div class="col-sm-10">
+                <input name="dob" type="date" class="form-control" id="dob" required>
+            </div>
+        </div>
+        <span id="check_dob" style="color:red;"></span>
+        <div class="row mb-3">
+            <label for="inputUsername" class="col-sm-2 col-form-label">Username :</label>
+            <div class="col-sm-10">
+                <input name="username" type="text" class="form-control" id="s_username" placeholder="Username"
+                    required>
+            </div>
+        </div>
+        <span id="check_un" style="color:red;"></span>
+        <div class="row mb-3">
+            <label for="s_password" class="col-sm-2 col-form-label">Password :</label>
+            <div class="col-sm-10">
+                <input name="password" type="password" class="form-control" id="s_password" placeholder="Password"
+                    required>
+            </div>
+        </div>
+        <span id="check_pw" style="color:red;"></span>
+        <div class="row mb-3">
+            <label for="re_password" class="col-sm-2 col-form-label">Confirm Password :</label>
+            <div class="col-sm-10">
+                <input name="re_password" type="password" class="form-control" id="re_password"
+                    placeholder="Confirm Password" required>
+            </div>
+        </div>
+        <span id="pass_check_rpw" style="color:red;"></span>
+        <div class="row">
+            <label class="col-sm-2 col-form-label" for="genderRadio">Gender :</label>
+            <div id="genderRadio" class="col-sm-10">
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" name="gender" id="radioMale" checked value="Male">
+                    <label class="form-check-label" for="radioMale">Male</label>
+                </div>
+                <div class="form-check form-check-inline ms-3">
+                    <input type="radio" class="form-check-input" name="gender" id="radioFemale" value="Female">
+                    <label class="form-check-label" for="radioFemale">Female</label>
+                </div>
+                <div class="form-check form-check-inline ms-3">
+                    <input type="radio" class="form-check-input" name="gender" id="radioOther" value="Other">
+                    <label class="form-check-label" for="radioOther">Other</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 offset-sm-2">
+                <input id="signup_btn" type="submit" class="btn btn-primary" value="Signup Now!">
+            </div>
+        </div>
+    </form>
+</div>

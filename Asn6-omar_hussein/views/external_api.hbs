@@ -1,0 +1,71 @@
+<script>
+    $(document).ready(function(){
+        $('#nl_search_btn').click(function(e) {
+            e.preventDefault();
+            $('#nl_srch_err').html('');
+
+            let uid = $('#api_uid').val();
+            let srch_type = $('#srch_type input[type="radio"]:checked').val();
+            let srch_key = $('#srch_key').val();
+
+            $.ajax({
+                type:'get',
+                url:`/eAPI/${uid}/${srch_type}/${srch_key}`,
+                success:function(data){
+                    console.log(data);
+                    console.log(data.length);
+                    if(data.length)
+                        window.open().document.write(JSON.stringify(data));
+                    else 
+                        $('#nl_srch_err').html('No Data Found');
+                },
+                error:function(){
+                    $('#nl_srch_err').html('UserID not found.');
+                }
+            });  
+        });
+    });
+</script>
+
+<div class="container">
+    <form method='GET' action='/eAPI' enctype='multipart/form-data'>
+        <br><br>
+        <h1><u>No-Login Search</u></h1>
+        <br>
+        <div class="row mb-3">
+            <label for="api_uid" class="col-sm-2 col-form-label">User ID :</label>
+            <div class="col-sm-10">
+                <input name="isbn" type="text" class="form-control" id="api_uid" placeholder="UID">
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-sm-2 col-form-label" for="srch_type">Search Type :</label>
+            <div id="srch_type" class="col-sm-10">
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input" name="search_type" id="bookID" checked value="id">
+                    <label class="form-check-label" for="radioMale">by ID</label>
+                </div>
+                <div class="form-check form-check-inline ms-3">
+                    <input type="radio" class="form-check-input" name="search_type" id="bookTitle" value="title">
+                    <label class="form-check-label" for="radioFemale">by Title</label>
+                </div>
+                <div class="form-check form-check-inline ms-3">
+                    <input type="radio" class="form-check-input" name="search_type" id="bookISBN" value="isbn">
+                    <label class="form-check-label" for="radioOther">by ISBN</label>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="srch_key" class="col-sm-2 col-form-label">Search Keyword :</label>
+            <div class="col-sm-10">
+                <input name="srch_key" type="text" class="form-control" id="srch_key" placeholder="Keyword">
+            </div>
+        </div>
+        <span id="nl_srch_err" style="color:red;">{{srch_err_msg}}</span>
+         <div class="row">
+            <div class="col-sm-10 offset-sm-2">
+                <input id="nl_search_btn" type="submit" class="btn btn-secondary" value="Request">
+            </div>
+        </div>
+    </form>
+</div>

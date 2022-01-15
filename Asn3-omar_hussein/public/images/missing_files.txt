@@ -1,0 +1,1 @@
+This directory contains a folder named flags with flag images from https://www.flagopedia.net to display in HTML

@@ -1,0 +1,79 @@
+#header {
+    display: block;
+    width: 100%;
+    height: 4em;
+    text-align: center;
+    border: solid 1px black ;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px black;
+    padding-top: 2em;
+    font-size: 25pt;
+    text-shadow: 0px 3px 2px snow;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.fultonschools.org%2Fcms%2Flib%2FGA50000114%2FCentricity%2FDomain%2F1391%2Fweatherbanner.png&f=1&nofb=1");
+}
+#data_type {
+    font-size: 18pt;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 200px;
+    border: solid black 2px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px black;
+    background-color: gray;
+}
+.map_content {
+    margin-top: 4em;
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 20px black;
+    text-align: center;
+    vertical-align: middle;
+    visibility: hidden;
+}
+.map_content td{
+    border: 1px solid black;
+    box-shadow: 0 0 1px;
+    height: 100px;
+    border-radius: 15px;
+}
+.map_content caption {
+    font-size: 24pt;
+    background-color: red;
+    border: solid black 1px;
+    border-radius: 15px;
+}
+.map_content .head {
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.map_content caption span {
+    font-size: 12pt;
+}
+.map_content caption:hover span,
+.map_content caption span:hover {
+    color: white;
+}
+button {
+    font-size: 15pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 2px 4px white;
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 125px;
+    background-color: burlywood;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px black;
+    text-align: center;
+}
+button:hover {
+    transform: scale(1.1);
+}

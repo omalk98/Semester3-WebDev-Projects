@@ -1,0 +1,26 @@
+#main {
+    padding: 20px;
+    width: 40%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16pt;
+    border: black solid 2px;
+    box-shadow: black 0 4px 20px;
+    background-color: lightblue;
+}
+#head {
+    font-size: 25pt;
+}
+#list_box {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#list {
+    text-align: left;
+    border: solid red 2px;
+    color: darkblue;
+    font-size: 13pt;
+    font-family: 'Courier New', Courier, monospace;
+}

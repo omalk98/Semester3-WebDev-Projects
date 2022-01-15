@@ -1,0 +1,1 @@
+This directory contains profile images for the sample server.

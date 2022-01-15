@@ -1,0 +1,19 @@
+<link rel='stylesheet' href='/stylesheets/style_search_table.css' />
+<table id="table_isbn" class="disp_tbl">
+     <tr>
+         <th>ID</th>
+         <th>First Name</th>
+         <th>Last Name</th>
+         <th>E-Mail Address</th>
+         <th>Country</th>
+         </tr>
+        {{#each data}}
+         <tr>
+             <td>{{this.id}}</td>
+             <td>{{this.first_name}}</td>
+             <td>{{this.last_name}}</td>
+             <td>{{this.email}}</td>
+             <td>{{this.country}} <img height="30px" width="auto" src="./images/flags/{{this.country}}.png" alt="country icon"/></td>
+         </tr>
+        {{/each}}
+</table>

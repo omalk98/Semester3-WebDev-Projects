@@ -1,0 +1,40 @@
+<script>
+    $(document).ready(function() {
+        $('#search_btn').click(function(e) {
+            e.preventDefault();
+            $(this).closest('form').attr('target', '_blank').submit();
+        });
+    });
+</script>
+
+<div class="container">
+    <form method='POST' action='/dashboard/search' enctype='multipart/form-data'>
+        <br><br>
+        <h1><u>Search</u></h1>
+        <br>
+        <div class="row mb-3">
+            <label for="srch_isbn" class="col-sm-2 col-form-label">Search ISBN :</label>
+            <div class="col-sm-10">
+                <input name="isbn" type="text" class="form-control" id="srch_isbn" placeholder="ISBN">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="srch_title" class="col-sm-2 col-form-label">Search Title :</label>
+            <div class="col-sm-10">
+                <input name="title" type="text" class="form-control" id="srch_title" placeholder="Title">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="srch_id" class="col-sm-2 col-form-label">Search ID :</label>
+            <div class="col-sm-10">
+                <input name="id" type="text" class="form-control" id="srch_id" placeholder="ID">
+            </div>
+        </div>
+        <span id="srch_err" style="color:red;">{{srch_err_msg}}</span>
+         <div class="row">
+            <div class="col-sm-10 offset-sm-2">
+                <input id="search_btn" type="submit" class="btn btn-secondary" value="Search">
+            </div>
+        </div>
+    </form>
+</div>

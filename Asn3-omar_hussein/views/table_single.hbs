@@ -1,0 +1,19 @@
+<link rel='stylesheet' href='/stylesheets/style_search_table.css' />
+<table id="table_isbn" class="disp_tbl">
+     <tr>
+         <th>ID</th>
+         <th>Title</th>
+         <th>Page Count</th>
+         <th>Published Date</th>
+         <th>Thumbnail</th>
+         <th>ISBN</th>
+         </tr>
+         <tr>
+             <td>{{data._id}}</td>
+             <td>{{data.title}}</td>
+             <td>{{data.pageCount}}</td>
+             <td>{{data.publishedDate}}</td>
+             <td><img width="100px" height="auto" src={{data.thumbnailUrl}} alt="thumbnail"></td>
+             <td>{{data.isbn}}</td>
+         </tr>
+</table>

@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/stylesheets/style_login_p">
+
+<form class="form-inline" method='POST' action='/login' enctype='multipart/form-data'>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username/Email" aria-label="Username"
+            aria-describedby="basic-addon1" name="username">
+        &nbsp;&nbsp;&nbsp;
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">#</span>
+        </div>
+        <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+            aria-describedby="basic-addon1" name="password">
+        &nbsp;&nbsp;
+        <input id='login_btn' class="btn btn-success" type='submit' value='Login'>
+    </div>
+    <span id="login_err" style="color: red; font-size:8pt;">
+        {{#if vars.err_msg}} <strong>Error!</strong> {{vars.err_msg}}!&nbsp;
+        <u>Not registered?</u> <a id="signup_redirect" href="{{vars.HTTP_HOST}}:{{vars.HTTP_PORT}}/signup" value="Login">Signup!</a>{{/if}}
+    </span>
+</form>

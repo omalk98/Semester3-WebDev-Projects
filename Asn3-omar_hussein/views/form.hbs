@@ -1,0 +1,8 @@
+<link rel='stylesheet' href='/stylesheets/style_form.css' />
+<div id="form_body">
+    <h1>Search by {{form_type}}</h1>
+    <form method="POST" action="/data/search/{{form_type}}" enctype="multipart/form-data">
+        <input id="field" type="text" name="{{form_type}}" placeholder="Enter {{form_type}}">
+        <input id="submit" type="submit" value="Search">
+    </form>
+</div>

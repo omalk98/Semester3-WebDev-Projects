@@ -1,0 +1,17 @@
+#form_body {
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 2px black;
+    box-shadow: 0 0 15px;
+    text-align: center;
+    width: fit-content;
+    padding: 10px;
+    background-color: forestgreen;
+}
+#field {
+    width: 350px;
+}
+#submit {
+    width: 100px; 
+    background-color: yellow;
+}

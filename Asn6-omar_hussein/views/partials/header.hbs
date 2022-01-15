@@ -1,0 +1,31 @@
+<script>
+    $(document).ready(function() {
+        $('a').click(function(){ 
+            $(this).toggleClass('active');
+        });
+    })
+</script>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="/home" class="navbar-brand">Assignment 5 API</a>
+            <span class="text-muted mx-2">|</span>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="/home" class="nav-item nav-link">Home</a>
+                    <a href="/signup" class="nav-item nav-link">Signup</a>
+                    <a href="/login" class="nav-item nav-link">Login</a>
+                    <a href="/dashboard" class="nav-item nav-link">Dashboard</a>
+                    <a href="/eAPI" class="nav-item nav-link">AJAX Call</a>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    {{#unless hide}}{{#if logged}} {{> 'profile' }} {{else}} {{> 'login_p' }} {{/if}}{{/unless}}
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
