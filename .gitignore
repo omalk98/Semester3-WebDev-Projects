@@ -5,7 +5,7 @@ week*
 **/public/images/**
 !**/public/images/missing_files.txt
 **/.data/**
-!**/.data/user_count.json
+!**/.data/.user_count.json
 !**/.data/missing_files.txt
 **/config/**
 **/database/config/**
