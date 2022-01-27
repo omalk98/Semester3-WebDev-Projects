@@ -8,13 +8,13 @@
 const requests = {  
     "Toronto": 
         {
-            "EN": "https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=f7b7c86c8d83af5ce929fe37a40aa052&units=metric",
-            "FR": "https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=f7b7c86c8d83af5ce929fe37a40aa052&units=metric&lang=fr" 
+            "EN": "https://api.openweathermap.org/data/2.5/weather?q=Toronto&units=metric&appid=<yourAppID>",
+            "FR": "https://api.openweathermap.org/data/2.5/weather?q=Toronto&units=metric&lang=fr&appid=<yourAppID>" 
         } ,
     "Oakville":
         {
-            "EN": "https://api.openweathermap.org/data/2.5/weather?q=Oakville&appid=f7b7c86c8d83af5ce929fe37a40aa052&units=metric",
-            "FR": "https://api.openweathermap.org/data/2.5/weather?q=Oakville&appid=f7b7c86c8d83af5ce929fe37a40aa052&units=metric&lang=fr" 
+            "EN": "https://api.openweathermap.org/data/2.5/weather?q=Oakville&units=metric&appid=<yourAppID>",
+            "FR": "https://api.openweathermap.org/data/2.5/weather?q=Oakville&units=metric&lang=fr&appid=<yourAppID>" 
         } 
 };
 

@@ -1,1 +1,0 @@
-This directory contains the database connection string to be used in app.js
